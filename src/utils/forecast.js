@@ -9,7 +9,7 @@ const forecast = (lat, long, cbf) => {
         } else if (body.error) {
             cbf('Unable to find location', undefined)
         } else {
-            cbf(undefined, `${body.daily.data[0].summary} it is currently ${body.currently.temperature} degrees out.there is a ${body.currently.precipProbability}% chance of rain`)
+            cbf(undefined, `${body.daily.data[0].summary} it is currently ${body.currently.temperature} degrees out. This high today is ${body.daily.data[0].temperatureHighbody.daily.data[0].temperatureLow}. There is a ${body.currently.precipProbability}% chance of rain`)
         }
     })
 }
